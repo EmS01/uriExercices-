@@ -1,0 +1,28 @@
+using System;
+
+class Program {
+    static void Main(string[] args) {
+        	
+	  double renda = double.Parse(Console.ReadLine());
+	  double imposto;
+	
+	  if(renda <= 2000.00){
+		  Console.WriteLine("Isento");
+	  }
+	  else if(renda > 2000.00 && renda <= 3000.00){
+		  renda -= 2000.00;
+		  imposto = renda * 0.08;
+		  Console.WriteLine("R$ {0:F2}", imposto);
+	  }
+	  else if(renda > 3000.00 && renda <= 4500.00){
+	    renda -= 3000.00;
+		  imposto = (renda * 0.18) + (1000 * 0.08);
+		  Console.WriteLine("R$ {0:F2}", imposto);
+	  }
+	  else{
+	    renda -= 4500;
+		  imposto = (renda * 0.28) + (1500 * 0.18) + (1000 * 0.08);
+		  Console.WriteLine("R$ {0:F2}", imposto);
+	  }
+    }
+}
