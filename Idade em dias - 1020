@@ -1,0 +1,20 @@
+using System; 
+
+class URI {
+
+    static void Main(string[] args) { 
+
+        int idadeEmDias = int.Parse(Console.ReadLine());
+        double ano = idadeEmDias / 365;
+        double mes = (idadeEmDias % 365) / 30;
+	      double dias = (idadeEmDias % 365) % 30;
+
+        Console.WriteLine(Convert.ToString((
+	      ano + " ano(s)\n"
+	      + mes + " mes(es)\n"
+	      + dias + " dia(s)"
+	      )));
+
+    }
+
+}
