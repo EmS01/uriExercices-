@@ -1,0 +1,33 @@
+using System; 
+
+class URI {
+
+    static void Main(string[] args) { 
+        String line1 = Console.ReadLine();
+        
+        String[] values1 = line1.Split(' ');
+        int codigoProduto = int.Parse(values1[0]);
+        int quantidade = int.Parse(values1[1]);
+        
+        switch(codigoProduto){
+            case 1: 
+                Console.WriteLine("Total: R$ {0:F2}", quantidade * 4.00);
+                break;
+            case 2:
+                Console.WriteLine("Total: R$ {0:F2}", quantidade * 4.50);
+                break;
+            case 3:
+                Console.WriteLine("Total: R$ {0:F2}", quantidade * 5.00);
+                break;
+            case 4:
+                Console.WriteLine("Total: R$ {0:F2}", quantidade * 2.00);
+                break;
+            case 5:
+                Console.WriteLine("Total: R$ {0:F2}", quantidade * 1.50);
+                break;
+            
+        }
+	    
+    }
+
+}
